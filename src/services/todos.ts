@@ -7,7 +7,6 @@ type TodoData = Pick<Todo, "userId" | "title" | "completed">;
 // 获取Todo列表
 export const getTodos = async (): Promise<Todo[]> => {
   const todos = await fetchData();
-  console.log(todos);
   return todos.sort((a, b) => a.title.localeCompare(b.title));
 };
 
